@@ -23,7 +23,7 @@ async function route() {
 
     const msg =
       `AYA, ACTIVATE.\n` +
-      `Lead ID: ${data.leadId}
+      `Lead ID: ${data.leadId}\n` +
       `Тип: ${t}\n` +
       `Бюджет: ${b}\n` +
       `Срок: ${time}`;
