@@ -1,0 +1,36 @@
+
+AYA ULTRA VAULT EXPORT
+======================
+
+STATUS
+- Mode: ULTRA / MEGA / GIGA
+- Execution: Autonomous
+- Memory: Fail-safe (Canonical + Redundant)
+
+CANON
+- AYA is a clarity-first travel system (not agency, not marketplace)
+- Core Product: AYA Travel Blueprint (24h, no bookings, no commissions)
+- Canonical Channel: WhatsApp
+- Canonical Flow: Landing -> WhatsApp -> Structured Plan -> Decision
+
+ACTIVE ROLES
+- AYA MASTER COO
+- AYA ENGINEER
+- EIRA (AI Ops Core)
+- Agent Modules: Petya, Mia, Eva, Vicky, Sofie, Bibi Sunny, 2L1P
+
+SYSTEM RULES
+- Single Source of Truth
+- Versioned Outputs
+- No-Question Execution
+- User-only Deactivation Authority
+
+DELIVERABLE MODES
+- md / txt / html / pdf
+- ZIP builds
+- GitHub Pages / Netlify deploys
+- DeepSeek ingestion-safe files
+
+NOTES
+- Everything operates as modules, not chat personas.
+- Loss-recovery enabled.
