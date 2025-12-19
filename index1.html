@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="bg">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AYA · ULTRA HUB</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header class="top">
+  <div class="brand">
+    <div class="orb"></div>
+    <div>
+      <div class="title">AYA · ULTRA HUB</div>
+      <div class="subtitle">Router · Pricing · Checkout</div>
+    </div>
+  </div>
+  <a class="cta" id="wa" href="#" target="_blank">WhatsApp</a>
+</header>
+
+<main class="grid">
+
+<section class="card">
+<h2>Agent Router</h2>
+
+<select id="type">
+  <option>City</option>
+  <option>Relax</option>
+  <option>Family</option>
+  <option>Luxury</option>
+</select>
+
+<select id="budget">
+  <option>Low</option>
+  <option>Mid</option>
+  <option>High</option>
+</select>
+
+<select id="time">
+  <option>24h</option>
+  <option>48h</option>
+</select>
+
+<button class="btn" onclick="route()">Generate WhatsApp</button>
+<pre id="out" class="prompt"></pre>
+</section>
+
+<section class="card">
+<h2>Checkout</h2>
+<p><b>AYA Travel Blueprint — 39 €</b></p>
+
+<a class="btn"
+   href="https://buy.stripe.com/REPLACE_WITH_YOUR_LINK"
+   target="_blank">
+   Pay 39 €
+</a>
+
+<p class="muted">След плащане → WhatsApp → доставка до 24h</p>
+</section>
+
+</main>
+
+<footer class="foot">
+AYA · LIVE
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
