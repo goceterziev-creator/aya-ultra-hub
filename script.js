@@ -4,10 +4,12 @@ async function route() {
   const time = document.getElementById('time').value;
 
   const payload = {
+    source: 'AYA_ULTRA_HUB',
     type: t,
     budget: b,
     time: time,
-    paid: false
+    paid: false,
+    createdAt: new Date().toISOString()
   };
 
   try {
@@ -22,7 +24,9 @@ async function route() {
     const msg =
       `AYA, ACTIVATE.\n` +
       `Lead ID: ${data.leadId}\n` +
-      `Тип: ${t}\nБюджет: ${b}\nСрок: ${time}`;
+      `Тип: ${t}\n` +
+      `Бюджет: ${b}\n` +
+      `Срок: ${time}`;
 
     document.getElementById('out').textContent = msg;
     document.getElementById('wa').href =
