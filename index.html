@@ -1,96 +1,78 @@
 <!doctype html>
 <html lang="bg">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AYA · ULTRA HUB</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AYA · ULTRA HUB v2</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="top">
-    <div class="brand">
-      <div class="orb" aria-hidden="true"></div>
-      <div>
-        <div class="title">AYA · ULTRA HUB</div>
-        <div class="subtitle">Clarity-first travel system · Canon + Vault</div>
-      </div>
+<header class="top">
+  <div class="brand">
+    <div class="orb"></div>
+    <div>
+      <div class="title">AYA · ULTRA HUB</div>
+      <div class="subtitle">Agent Router · Pricing · Vault</div>
     </div>
+  </div>
+  <a class="cta" id="wa" href="#" target="_blank">WhatsApp · Start</a>
+</header>
 
-    <a class="cta" id="whatsappCta" href="#" target="_blank" rel="noopener">WhatsApp · Start</a>
-  </header>
+<main class="grid">
+<section class="card">
+<h2>Agent Router</h2>
+<p>Избери параметри и AYA насочва автоматично.</p>
 
-  <main class="grid">
-    <section class="card">
-      <h2>AYA Travel Blueprint</h2>
-      <p>Персонален travel план за 24 часа. Без резервации. Без комисионни. Само яснота и структура.</p>
-      <div class="pillrow">
-        <span class="pill">39 €</span>
-        <span class="pill">Delivery: WhatsApp / текст</span>
-        <span class="pill">3 нива бюджет</span>
-      </div>
-      <div class="actions">
-        <button class="btn" id="copyPrompt">Copy Intake Prompt</button>
-        <a class="btn ghost" id="openVault" href="vault/AYA_CANON_MASTER.md" target="_blank" rel="noopener">Open Canon</a>
-      </div>
-      <pre class="prompt" id="intakePrompt">AYA, ACTIVATE.
-Задача: AYA Travel Blueprint.
-Дестинация:
-Дати:
-Пътуващи:
-Стил (relax/experience/lux/family):
-Бюджет (low/mid/high):
-Приоритети (топ 3):
-Ограничения/must-have:
-Изход: маршрут по дни + зони за хотел + транспорт + 3 бюджета.</pre>
-    </section>
+<label>Тип пътуване</label>
+<select id="type">
+  <option>City</option>
+  <option>Relax</option>
+  <option>Family</option>
+  <option>Luxury</option>
+</select>
 
-    <section class="card">
-      <h2>Vault</h2>
-      <p>Single-source-of-truth файлове за устойчивост (DeepSeek-ready).</p>
-      <ul class="list">
-        <li><a href="vault/AYA_CANON_MASTER.md" target="_blank" rel="noopener">AYA_CANON_MASTER.md</a></li>
-        <li><a href="vault/AYA_ULTRA_VAULT_EXPORT.txt" target="_blank" rel="noopener">AYA_ULTRA_VAULT_EXPORT.txt</a></li>
-        <li><a href="vault/Aya-engineer-agent.txt" target="_blank" rel="noopener">Aya-engineer-agent.txt</a></li>
-        <li><a href="vault/README_VAULT.md" target="_blank" rel="noopener">README_VAULT.md</a></li>
-      </ul>
-      <div class="actions">
-        <a class="btn" href="vault/" target="_blank" rel="noopener">Open vault folder</a>
-      </div>
-    </section>
+<label>Бюджет</label>
+<select id="budget">
+  <option>Low</option>
+  <option>Mid</option>
+  <option>High</option>
+</select>
 
-    <section class="card">
-      <h2>Deploy</h2>
-      <p>Готово за GitHub Pages / Netlify. Няма билд стъпка. Само static.</p>
-      <ol class="steps">
-        <li>Качи цялата папка като repo.</li>
-        <li>GitHub → Settings → Pages → Deploy from branch.</li>
-        <li>Избери branch: main, folder: /root.</li>
-      </ol>
-      <div class="actions">
-        <a class="btn ghost" href="README.md" target="_blank" rel="noopener">Open README</a>
-      </div>
-    </section>
+<label>Срок</label>
+<select id="time">
+  <option>24h</option>
+  <option>48h</option>
+</select>
 
-    <section class="card">
-      <h2>Status</h2>
-      <div class="kv">
-        <div class="k">MODE</div><div class="v">ULTRA / MEGA / GIGA</div>
-        <div class="k">MEMORY</div><div class="v">FAIL-SAFE</div>
-        <div class="k">EXECUTION</div><div class="v">AUTONOMOUS</div>
-        <div class="k">DEACTIVATE</div><div class="v">USER-ONLY</div>
-      </div>
-      <p class="muted">Last build: <span id="buildStamp"></span></p>
-    </section>
-  </main>
+<button class="btn" onclick="route()">Generate WhatsApp</button>
+<pre id="out" class="prompt"></pre>
+</section>
 
-  <footer class="foot">
-    <span>AYA · ULTRA HUB</span>
-    <span class="dot">•</span>
-    <a href="vault/AYA_CANON_MASTER.md" target="_blank" rel="noopener">Canon</a>
-    <span class="dot">•</span>
-    <a href="vault/AYA_ULTRA_VAULT_EXPORT.txt" target="_blank" rel="noopener">Export</a>
-  </footer>
+<section class="card">
+<h2>Pricing</h2>
+<ul class="list">
+<li><b>AYA Travel Blueprint</b></li>
+<li>✔ персонален маршрут</li>
+<li>✔ 3 бюджетни нива</li>
+<li>✔ логика по дни</li>
+<li>❌ без резервации</li>
+<li>❌ без комисионни</li>
+</ul>
+<p class="price">Цена: <b>39 €</b></p>
+</section>
 
-  <script src="script.js"></script>
+<section class="card">
+<h2>Vault</h2>
+<ul class="list">
+<li><a href="vault/AYA_CANON_MASTER.md" target="_blank">AYA_CANON_MASTER.md</a></li>
+<li><a href="vault/AYA_ROUTER_RULES.md" target="_blank">AYA_ROUTER_RULES.md</a></li>
+<li><a href="vault/AYA_ULTRA_VAULT_EXPORT_v2.txt" target="_blank">AYA_ULTRA_VAULT_EXPORT_v2.txt</a></li>
+</ul>
+</section>
+</main>
+
+<footer class="foot">AYA · v2 · AUTONOMOUS</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
