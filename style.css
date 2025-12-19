@@ -17,6 +17,30 @@ body {
   gap: 16px;
   padding: 16px;
 }
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.status-item {
+  background: rgba(0,0,0,0.35);
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.label {
+  font-size: 11px;
+  letter-spacing: 1px;
+  opacity: 0.6;
+}
+
+.value {
+  font-size: 18px;
+  font-weight: 800;
+  margin-top: 4px;
+}
 
 .card {
   background: #0E1422;
